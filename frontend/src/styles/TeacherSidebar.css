@@ -1,0 +1,283 @@
+.teacher-sidebar {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%) !important;
+  border-right: 1px solid #e9ecef;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+  height: 100vh;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  padding: 24px 16px;
+  border-bottom: 1px solid #e9ecef;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo-icon {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  color: #3b82f6;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.sidebar-profile {
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f3f4f6;
+}
+
+.profile-card:hover {
+  background: #e5e7eb;
+  transform: translateX(2px);
+}
+
+.profile-avatar {
+  background: linear-gradient(135deg, #3b82f6, #1e40af) !important;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-menu {
+  border: none !important;
+  background: transparent !important;
+  padding: 16px 0;
+}
+
+.teacher-menu .ant-menu-item {
+  margin: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #4b5563;
+  height: 40px;
+  line-height: 40px;
+}
+
+.teacher-menu .ant-menu-item:hover {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #3b82f6;
+}
+
+.teacher-menu .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05)) !important;
+  color: #3b82f6 !important;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+  padding-left: 12px !important;
+}
+
+.teacher-menu .ant-menu-submenu {
+  margin: 8px 12px;
+}
+
+.teacher-menu .ant-menu-submenu-title {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #4b5563;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 12px !important;
+}
+
+.teacher-menu .ant-menu-submenu-title:hover {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #3b82f6;
+}
+
+.teacher-menu .ant-menu-submenu-open > .ant-menu-submenu-title {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+}
+
+.teacher-menu .ant-menu-sub {
+  background: transparent !important;
+}
+
+.teacher-menu .ant-menu-item-selected::after {
+  display: none;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #e9ecef;
+  margin-top: auto;
+  background: #f9fafb;
+}
+
+.create-exam-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  border: none !important;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.create-exam-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Collapsed state */
+.ant-layout-sider-collapsed .teacher-menu .ant-menu-item {
+  padding: 0 !important;
+  margin: 8px 12px;
+  text-align: center;
+}
+
+.ant-layout-sider-collapsed .sidebar-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-layout-sider-collapsed .profile-info {
+  display: none;
+}
+
+.ant-layout-sider-collapsed .profile-card {
+  margin: 0 auto;
+  width: fit-content;
+  background: transparent;
+}
+
+.ant-layout-sider-collapsed .profile-card:hover {
+  background: transparent;
+  transform: none;
+}
+
+/* Scrollbar styling */
+.teacher-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teacher-sidebar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.teacher-sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.teacher-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .teacher-sidebar {
+    width: 100% !important;
+    position: relative !important;
+    height: auto;
+  }
+
+  .ant-layout-sider-collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Menu item icon styling */
+.teacher-menu .ant-menu-item-icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.teacher-menu .ant-menu-submenu-title-content {
+  flex: 1;
+}
+
+/* Submenu styling */
+.teacher-menu .ant-menu-submenu-title-content {
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+.teacher-menu .ant-menu-item {
+  letter-spacing: -0.3px;
+}
+
+/* Focus state */
+.teacher-menu .ant-menu-item:focus,
+.teacher-menu .ant-menu-submenu-title:focus {
+  outline: none;
+}
+
+/* Animation */
+.teacher-sidebar {
+  transition: all 0.3s ease;
+}
+
+.profile-card {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

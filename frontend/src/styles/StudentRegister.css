@@ -1,0 +1,462 @@
+/* Student Register Page Styles */
+
+.student-register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem 0;
+}
+
+.register-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.register-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #7c3aed 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #0ea5e9 0%, transparent 70%);
+  bottom: 50px;
+  left: -50px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #ec4899 0%, transparent 70%);
+  top: 30%;
+  left: 5%;
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.05); }
+}
+
+.register-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2rem;
+  max-width: 520px;
+}
+
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #d0d0d0 !important;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  color: #ffffff !important;
+  transform: translateX(-4px);
+}
+
+.register-box {
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(100, 100, 100, 0.2);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.register-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.register-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.register-box::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+}
+
+.register-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.5);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.register-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-header p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.register-alert {
+  margin-bottom: 1.5rem !important;
+  border-radius: 8px !important;
+  background: rgba(220, 38, 38, 0.1) !important;
+  border: 1px solid rgba(220, 38, 38, 0.3) !important;
+  color: #fca5a5 !important;
+}
+
+.ant-alert-message {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.ant-alert-description {
+  color: #d0d0d0 !important;
+}
+
+.register-form {
+  margin-bottom: 2rem;
+}
+
+.form-item-custom {
+  margin-bottom: 1rem !important;
+}
+
+.form-item-custom label {
+  color: #d0d0d0 !important;
+  font-weight: 500;
+}
+
+.register-input {
+  background-color: rgba(50, 50, 50, 0.8) !important;
+  border: 1.5px solid rgba(100, 100, 100, 0.3) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+}
+
+.register-input:hover {
+  border-color: rgba(124, 58, 237, 0.5) !important;
+  background-color: rgba(50, 50, 50, 1) !important;
+  outline: none !important;
+}
+
+.register-input:focus {
+  background-color: rgba(50, 50, 50, 1) !important;
+  border-color: #7c3aed !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.ant-input {
+  color: #ffffff !important;
+}
+
+.ant-input::placeholder {
+  color: #888888 !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.register-select {
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+.register-select .ant-select-selector {
+  background-color: rgba(50, 50, 50, 0.8) !important;
+  border: 1.5px solid rgba(100, 100, 100, 0.3) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  height: 40px !important;
+}
+
+.register-select .ant-select-selector:hover {
+  border-color: rgba(124, 58, 237, 0.5) !important;
+}
+
+.register-select .ant-select-focused .ant-select-selector,
+.register-select .ant-select-open .ant-select-selector {
+  border-color: #7c3aed !important;
+  box-shadow: none !important;
+}
+
+.register-select .ant-select-arrow {
+  color: #888888 !important;
+}
+
+.register-select .ant-select-selection-item {
+  color: #ffffff !important;
+  line-height: 38px !important;
+}
+
+.register-select .ant-select-selection-placeholder {
+  color: #888888 !important;
+}
+
+.ant-select-dropdown {
+  background: rgba(30, 30, 30, 0.95) !important;
+  border: 1px solid rgba(100, 100, 100, 0.2) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(16px) !important;
+  z-index: 1050 !important;
+}
+
+.ant-select-item {
+  color: #d0d0d0 !important;
+  padding: 10px 12px !important;
+}
+
+.ant-select-item-option {
+  color: #d0d0d0 !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(124, 58, 237, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.ant-select-item-option:hover {
+  background: rgba(124, 58, 237, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.input-icon {
+  color: #888888 !important;
+}
+
+.ant-input::placeholder {
+  color: #666666 !important;
+}
+
+.register-button {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  border: none !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  padding: 0.8rem 0 !important;
+  height: 48px !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.register-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s;
+}
+
+.register-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4) !important;
+}
+
+.register-button:hover::before {
+  left: 100%;
+}
+
+.register-button:disabled {
+  opacity: 0.6 !important;
+}
+
+.register-divider {
+  border-color: rgba(100, 100, 100, 0.2) !important;
+  margin: 1.5rem 0 !important;
+}
+
+.ant-divider-inner-text {
+  color: #888888 !important;
+}
+
+.register-footer {
+  text-align: center;
+}
+
+.register-footer p {
+  margin: 0;
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+
+.login-link {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-link:hover {
+  color: #9d4edd;
+  text-decoration: underline;
+}
+
+/* Ant Design Overrides */
+.ant-form-item-required > label::before {
+  color: #7c3aed !important;
+}
+
+.ant-form-item-has-error .register-input {
+  border-color: #dc2626 !important;
+  background-color: rgba(220, 38, 38, 0.05) !important;
+}
+
+.ant-form-item-has-error .register-input:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.ant-form-item-explain-error {
+  color: #fca5a5 !important;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-content {
+    padding: 1rem;
+  }
+
+  .register-box {
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .register-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .back-button {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .blob-1 {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    right: -50px;
+  }
+
+  .blob-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    left: -30px;
+  }
+
+  .blob-3 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .form-item-custom {
+    margin-bottom: 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-register-container {
+    padding: 1rem 0;
+  }
+
+  .register-content {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .register-box {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    border-radius: 12px;
+    max-height: none;
+  }
+
+  .register-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .register-header p {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    display: none;
+  }
+
+  .form-item-custom {
+    margin-bottom: 0.7rem !important;
+  }
+
+  .register-button {
+    height: 44px !important;
+    font-size: 1rem !important;
+  }
+}

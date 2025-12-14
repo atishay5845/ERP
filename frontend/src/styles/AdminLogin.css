@@ -1,0 +1,310 @@
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.login-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.login-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.admin-login-container .blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #ef4444 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.admin-login-container .blob-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #f97316 0%, transparent 70%);
+  bottom: -50px;
+  right: -50px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.admin-login-container .blob-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #dc2626 0%, transparent 70%);
+  top: 50%;
+  right: 10%;
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.05); }
+}
+
+.login-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2rem;
+  max-width: 480px;
+}
+
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #d0d0d0 !important;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.back-button:hover {
+  color: #ffffff !important;
+  transform: translateX(-4px);
+}
+
+.login-box {
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(100, 100, 100, 0.2);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-header p {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.dark-input {
+  background-color: rgba(50, 50, 50, 0.8) !important;
+  border: 1px solid rgba(150, 150, 150, 0.3) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+}
+
+.dark-input::placeholder {
+  color: #888888 !important;
+}
+
+.dark-input:hover {
+  background-color: rgba(60, 60, 60, 0.9) !important;
+  border-color: rgba(150, 150, 150, 0.5) !important;
+  outline: none !important;
+}
+
+.dark-input:focus {
+  background-color: rgba(60, 60, 60, 0.9) !important;
+  border-color: #ef4444 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.ant-input {
+  color: #ffffff !important;
+}
+
+.ant-input::placeholder {
+  color: #888888 !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.login-button {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%) !important;
+  border: none !important;
+  height: 2.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.4) !important;
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.ant-form-item-label > label {
+  color: #e8e8e8 !important;
+}
+
+.ant-input-prefix {
+  color: #888888 !important;
+}
+
+.ant-input:focus .ant-input-prefix {
+  color: #ef4444 !important;
+}
+
+.ant-input-textarea {
+  background-color: rgba(50, 50, 50, 0.8) !important;
+  border: 1px solid rgba(150, 150, 150, 0.3) !important;
+}
+
+.ant-input-textarea textarea {
+  color: #ffffff !important;
+}
+
+.ant-alert {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 8px !important;
+}
+
+.ant-alert-message {
+  color: #ef4444 !important;
+}
+
+.ant-alert-icon {
+  color: #ef4444 !important;
+}
+
+.ant-divider {
+  border-color: rgba(200, 200, 200, 0.2) !important;
+}
+
+.admin-login-container ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-login-container ::-webkit-scrollbar-track {
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.admin-login-container ::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.6);
+  border-radius: 4px;
+}
+
+.admin-login-container ::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+@media (max-width: 768px) {
+  .login-content {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .login-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .login-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-button {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 1rem;
+  }
+
+  .login-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .login-box {
+    padding: 1.75rem 1rem;
+  }
+
+  .login-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .login-header p {
+    font-size: 0.85rem;
+  }
+
+  .back-button {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .admin-login-container .blob-1,
+  .admin-login-container .blob-2,
+  .admin-login-container .blob-3 {
+    opacity: 0.05;
+  }
+
+  .dark-input {
+    font-size: 16px !important;
+  }
+}
